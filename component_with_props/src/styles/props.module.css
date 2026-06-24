@@ -1,0 +1,9 @@
+.main{
+    display:grid;
+    gap:2rem;
+    grid-template-columns: repeat(4,1fr);
+}
+.container{
+    border:0.2rem solid black;
+    padding:0.5rem;
+}

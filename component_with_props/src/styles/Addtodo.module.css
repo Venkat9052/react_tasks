@@ -1,0 +1,83 @@
+*{
+    padding:0px;
+    margin:0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.supercont{
+    display:flex;
+    height:100vh;
+    width:100vw;
+    justify-content: center;
+    background: grey;
+    
+}
+
+.main{
+    display:grid;
+    margin:auto;
+    height:auto;
+    width:25rem;
+    align-items: center;
+    justify-content: center;
+    padding:0.5rem;
+    gap:1rem;
+    border-radius: 0.5rem;
+    box-shadow: 2px 4px 4px black;
+    background: linear-gradient(
+    135deg,
+    #ffffff,
+    #f3f4f6 );
+
+}
+
+.inputs{
+    display:flex;
+    flex-direction: row-reverse;
+    width:100%;
+    gap:1rem;
+}
+
+.inputs input{
+    width:100%;
+    border-radius: 0.5rem;
+    border:1px solid black; 
+    transition: all 0.3s ease-in; 
+    padding:0rem 0.3rem;
+}
+.inputs input:hover{
+    border:0.1rem solid white;
+    box-shadow: 2px 4px 4px black;
+}
+.inputs input:focus{
+    border:none;
+    outline:none;
+}
+.inputs label{
+    width:6rem;
+}
+
+.btn{
+    display:flex;
+    height:fit-content;
+    width:100%;
+    justify-content: center;
+}
+
+.btn button{
+    height:2rem;
+    width:50%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg,red,blue);
+    border-radius: 0.5rem;
+    color:white;
+    transition:all 0.3s ease-in;    
+    
+}
+.btn button:hover{
+    box-shadow: 2px 4px 4px black,
+                2px 4px 4px black;
+}

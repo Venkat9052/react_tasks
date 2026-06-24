@@ -1,0 +1,124 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.main{
+    height:100vh;
+    width:100vw;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:0.5rem;
+    background: aquamarine;
+}
+.head{
+    font-weight: 600;
+    text-align: center;
+    font-size:1.5em;
+    
+}
+.container{
+    height:22rem;
+    width:20rem;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border:0.2rem solid yellow;
+    border-radius: 1rem;
+    padding:1rem;
+    gap:1rem;
+    margin-top:5rem;
+    transition:all 0.3s ease-in;
+    box-shadow: 2px 4px 4px black;
+}
+
+
+.inputs{
+    position: relative;
+}
+
+.inputs input{
+    width: 100%;
+    padding: 5px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+}
+
+.inputs label{
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    padding: 0 5px;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+/* Float label */
+.inputs input:focus + label,
+.inputs input:not(:placeholder-shown) + label{
+    top: 0;
+    font-size: 12px;
+    color: #3b82f6;
+}
+
+.submit{
+    height:auto;
+    width:auto;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    gap:1rem;
+}
+
+.submit button{
+    
+    height:3rem;
+    width:100%;
+    background: cyan;
+    border-radius: 1rem;
+    font-size: larger;
+    box-shadow: 2px 4px 4px black inset;
+    cursor:pointer;
+    transition:all 0.3s ease-in;
+}
+.submit button:hover{
+    background: green;
+    box-shadow: 2px 4px 4px black;
+}
+.submit button:active{
+    background:aquamarine;
+}
+
+.hidecontainer{
+    height:6rem;
+    width:20rem;
+    display:flex;
+    flex-direction: column;
+    padding:0.5rem;
+    border:0.2rem solid blue;
+    border-radius: 1rem;
+    box-shadow: 2px 4px 4px black;
+    background: #3b82f6;
+}
+
+.hidecontainer h3{
+    text-align: center;
+    font-weight: 800;
+}
+
+.details{
+    display:flex;
+    flex-wrap: wrap;
+    gap:0.5rem;
+    
+}
+
+.details span{
+ font-weight: 600;
+}

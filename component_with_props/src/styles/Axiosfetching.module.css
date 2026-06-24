@@ -1,0 +1,173 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root{
+    /* Backgrounds */
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --bg-card: #334155;
+
+    /* Text */
+    --text-primary: #f8fafc;
+    --text-secondary: #cbd5e1;
+
+    /* Accent */
+    --accent-primary: #38bdf8;
+    --accent-hover: #0ea5e9;
+
+    /* Borders */
+    --border-color: #475569;
+
+    /* Shadows */
+    --shadow-color: rgba(0, 0, 0, 0.35);
+
+    /* Loader */
+    --loader-track: #e2e8f0;
+    --loader-spinner: #38bdf8;
+}
+
+.loader{
+    height:100vh;
+    width:100vw;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg-primary);
+}
+.loading{
+    height: 15rem;
+    width: 15rem;
+    border: 1rem solid var(--loader-track);
+    border-top: 1rem solid var(--loader-spinner);
+    border-radius: 50%;
+    padding:0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: spin 2s linear 0.2s infinite;
+}
+
+.loading span{
+    font-size: 2rem;
+    font-weight: 600;
+    color:var(--accent-hover);
+    animation: reverseSpin 2s linear 0.2s infinite;
+}
+
+@keyframes spin{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes reverseSpin{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(-360deg);
+    }
+}
+
+/* //student card section styling....................... */
+
+.main{
+    height:100vh;
+    width:100vw;
+    display:grid;
+    gap:2rem;
+    grid-template-columns: repeat(5,1fr);
+    padding:1rem;
+    background:var(--bg-primary);
+}
+
+.stucard{
+    height:15rem;
+    width:12rem;
+    padding:0.5rem;
+    border:2px solid var(--border-color);
+    display:flex;
+    flex-direction: column;
+    gap:0.5rem;
+    border-radius: 0.5rem;
+    background: var(--bg-card);
+    color:var(--accent-primary);
+    transition:all 0.3s linear;
+}
+
+.stucard:hover{
+    box-shadow: 4px 8px 8px black;
+}
+
+.stucard h3{
+    height:1.5rem;
+    text-align: center;
+    font-size:1.5rem;
+    font-weight: 600;
+}
+
+.details{
+    display:flex;
+    flex-direction: column;
+    gap:1rem;
+}
+
+.details p{
+    color:white;
+    font-weight: 600;
+}
+
+.details p span{
+    color:var(--accent-primary);
+    font-weight: 400;
+}
+
+.crud{
+    display:flex;
+    gap:0.5rem;
+    height:1rem;
+    justify-content:space-evenly;
+}
+
+.crud h3{
+    font-size: 1.1rem;
+}
+
+.crud button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:1.3rem;
+    width:1.3rem;
+    cursor:pointer;
+    background: #0ea5e9;
+    border-radius: 0.1rem;
+}
+
+.crud button img{
+    height:1.2rem;
+    width: 1.2rem;
+}
+
+.details button{
+    display: flex;
+    height:10rem;
+    justify-content: center;
+    align-items: center;
+    background: #0ea5e9;
+    border-radius: 1rem;
+}
+
+.details button img{
+    height:3.5rem;
+    width:3.5rem;
+    cursor:pointer;
+}
+

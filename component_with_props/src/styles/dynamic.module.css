@@ -1,0 +1,191 @@
+*{
+    padding:0px;
+    margin:0px;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+.main{
+    display:flex;
+    align-items: center;
+    gap:1rem;
+    flex-direction: column;
+    height:100vh;
+    width:100vw;
+    background-color:burlywood;
+    padding:1rem;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.main form{
+    display:flex;
+    flex-direction: column;
+    height:fit-content;
+    width:20rem;
+    background-color: cornsilk;
+    border:0.2rem solid navy;
+    padding:1rem;
+    border-radius: 1rem;
+    margin-top: 0.5rem;
+    gap:1rem;
+    box-shadow: 2px 4px 4px black;
+    transition:all 0.3s ease-in;
+}
+.main form:hover{
+    transform: translateY(-10px);
+}
+.main form h3{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+    font-weight: 600;
+    text-align: center;
+    color:blue;
+    transition:all 0.3s linear;
+}
+
+.main form h3:hover{
+    color:red;
+    text-shadow: 1px 2px 2px black;
+
+}
+.inputs{
+    display:flex;
+    gap:1rem;
+    align-items: center;
+    position:relative;
+}
+
+.inputs input{
+    border:0.1rem solid black;
+    border-radius: 0.6rem;
+    height:2.5rem;
+    padding:0rem 0.5rem;
+    width:100%;
+}
+.inputs input:focus{
+    border:none;
+    outline:none;
+    border:0.2rem solid navy;
+}
+
+
+ .inputs label{
+    font-family: 'Times New Roman', Times, serif;
+    position:absolute;
+    left:0.5rem; 
+    transform-origin:left center;
+    transition: all 0.3s ease;
+
+ }
+
+ .inputs input:focus+label,
+ .inputs input:not(:placeholder-shown)+label{
+    position:absolute;
+    top:-0.6rem;
+    left:0.4rem;
+    font-size: small;
+    font-weight: 600;
+    background:cornsilk;
+    width:fit-content;
+    padding:0rem 0.2rem;
+    border-radius: 0.2rem;
+    color:navy;
+ }
+
+.button{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:1rem;
+    height:auto;
+    width:100%;
+
+}
+
+.button button{
+    border:0.1rem solid black;
+    height:2rem;
+    width:50%;
+    padding:0.3rem;
+    border-radius: 0.5rem;
+    background:cornflowerblue;
+    box-shadow: 2px 3px 3px black inset;
+
+}
+
+.button button:hover{
+    background: rgb(39, 104, 223);
+}
+
+.button button:active{
+    background: navy;
+    color:white;
+    font-weight: 600;
+}
+
+.hidecontainer{
+    height:fit-content;
+    width:20rem;
+    background:rgb(102, 148, 234);
+    border:0.2rem solid blue;
+    border-radius:1rem;
+    overflow-y: auto;
+    padding:0.5rem;
+    gap:1rem;
+    box-shadow: 2px 4px 4px black;
+    position: relative;
+
+}
+.hidecontainer::-webkit-scrollbar{
+    display:none;
+}
+.hidecontainer>p{
+    font-weight: 600;
+}
+
+.name{
+    display:flex;
+    gap:0.5rem;
+    overflow: auto;
+    gap:1rem;
+}
+.name::-webkit-scrollbar{
+    display: none;
+}
+
+.name span{
+    font-weight: 600;
+}
+.reset{
+    height:auto;
+    width:100%;
+    display:flex;
+    justify-content: flex-end;
+}
+
+.reset button{
+    position: absolute;
+    bottom:0.5rem;
+    right:0.5rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:1.5rem;
+    width:20%;
+    border:0.1rem solid black;
+    background: chartreuse;
+    border-radius: 0.5rem;
+    box-shadow: 1px 2px 2px black;
+    cursor:pointer;
+    transition: all 0.3s linear;
+}
+
+.reset button:hover{
+    transform: translateY(-5px);
+    background-color: rgb(156, 212, 99);
+}
+
+.reset button:active{
+    background: crimson;
+    color:white;
+}

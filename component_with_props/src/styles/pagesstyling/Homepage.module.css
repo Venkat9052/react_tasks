@@ -1,0 +1,131 @@
+:root{
+    /* Main Background */
+    --bg-primary:#0f172a;
+    --bg-secondary:#1e293b;
+    --bg-card:#334155;
+
+    /* Accent Colors */
+    --accent-primary:#3b82f6;
+    --accent-secondary:#60a5fa;
+
+    /* Text */
+    --text-primary:#f8fafc;
+    --text-secondary:#cbd5e1;
+
+    /* Cards */
+    --card-bg:rgba(255,255,255,0.05);
+    --card-border:rgba(255,255,255,0.1);
+
+    /* Shadows */
+    --shadow:0 8px 32px rgba(0,0,0,0.25);
+}
+
+/* .hero section styling here  ..............................*/
+.hero{
+    height:19rem;
+    width:auto;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background:var(--bg-secondary);
+    color:var(--accent-primary);
+}
+
+.heroinfo{
+    display:flex;
+    flex-direction: column;
+    gap:0.5rem;
+    padding:0.5rem;
+}
+ .title{
+    font-size: 4rem;
+    font-weight: 600;
+    text-align: center;
+ }
+
+.typingtext{
+    font-size: 3rem;
+    color:cyan;
+    display:flex;
+    flex-direction: column;
+    font-weight: 500;
+    align-items: center;
+ }
+
+.herotext{
+    font-size: 1.5rem;
+    color:var(--accent-secondary);
+ }
+
+/* skills section styling is here ...........................*/
+
+.skillhead{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+    font-size: 2rem;
+    color:var(--accent-primary);
+    background:var(--bg-secondary);
+    padding:0rem 1rem;
+    transition:all 0.3s linear;
+}
+.skillhead:hover{
+    color:cyan;
+}
+.skillwrapper{
+    height:fit-content;
+    display:flex;
+    width:100%;
+    overflow:hidden;
+}
+.skilllist{
+    height:12rem;
+    background:var(--bg-secondary);
+    display:flex;
+    width:max-content;
+    align-items: center;
+    gap:2rem;
+    cursor:pointer;
+    animation:scroll 15s linear infinite;
+}
+
+@keyframes scroll{
+    from{
+        transform:translateX(0);
+    }
+
+    to{
+        transform:translateX(-50%);
+    }
+}
+
+.skillitem{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:10rem;
+    width:8rem;
+    background: var(--card-bg);
+    border:0.1rem solid var(--card-border);
+    border-radius: 1rem;
+    transition:all 0.3s linear;
+}
+
+.skillitem:hover{
+    transform: translateY(-18px);
+}
+.skillitem:active{
+    animation-play-state: paused;
+}
+
+.skillitem img{
+    height:6rem;
+    width:6rem;
+    background-size: cover;
+    transition: all 0.3s linear;
+
+}
+.skillitem img:hover{
+    transform:scale(1.2);
+}
+
+
