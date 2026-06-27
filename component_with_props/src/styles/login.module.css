@@ -35,7 +35,7 @@
     align-items: center;
     height:95vh;
     width:100vw;
-    background-color: var(--bg-secondary);
+    background-color: #1e293b;
 
 }
 
@@ -45,27 +45,27 @@
     gap:1rem;
     height:35vh;
     width:30vw;
-    border:var(--card-border);
+    border:0.1rem solid rgba(167,139,250,0.2);
     padding:1rem;
     border-radius: 1rem;
     position:relative;
-    background: var(--card-bg);
+    background:#273449;
     margin-left: 1rem;
-    box-shadow: var(--card-shadow);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
 }
 
 .head{
     height:fit-content;
 }
 .head h1{
-    color:var(--accent-primary);
+    color:#8b5cf6;
     font-size: 2.5rem;
     font-weight: 600;
     text-align: center;
 }
 
 .head h1:hover{
-    color:var(--accent-secondary);
+    color:#a78bfa;
 }
 .inputs{
     display:flex;
@@ -85,8 +85,8 @@
     width:100%;
     outline:none;
     height:2.5rem;
-    background:var(--input-bg);
-    border:0.1rem solid var(--input-border);
+    background:#273449;
+    border:0.1rem solid #475569;
     border-radius: 0.5rem;
     color:navy;
     transition:all 0.5s linear;
@@ -97,20 +97,20 @@
     left:0.5rem;
     top:0.5rem;
     font-size: small;
-    color:var(--accent-primary);
+    color:#8b5cf6;
     transition:all 0.3s ease; 
     
 }
 .input input:focus{
-    border: 0.1rem solid var(--input-focus);
-    color:var(--accent-primary);
+    border: 0.1rem solid #8b5cf6;
+    color:#8b5cf6;
     padding:0 0.4rem;
 }
 .input label{
     position:absolute;
     left:0.5rem;
     top:0.5rem;
-    color:var(--accent-primary);
+    color:#8b5cf6;
     transition:all 0.3s ease;
     pointer-events:none;
 }
@@ -123,7 +123,7 @@
     background:black;
     padding:0rem 0.2rem;
     border-radius:0.1rem;
-    color:var(--accent-secondary);
+    color:#a78bfa;
 }
 
 .loginbut{
@@ -137,14 +137,14 @@
     width:100%;
     font-weight: 600;
     font-size: 1.2rem;
-    background:var(--accent-primary);
-    border: 0.1rem solid var(--accent-secondary);
+    background:#8b5cf6;
+    border: 0.1rem solid #a78bfa;
     border-radius: 1rem;
     transition: all 0.3s linear;
 
 }
 
 .loginbut button:hover{
-    background: var(--accent-secondary);
-    border:0.1rem solid var(--accent-primary);
+    background: #a78bfa;
+    border:0.1rem solid #8b5cf6;
 }

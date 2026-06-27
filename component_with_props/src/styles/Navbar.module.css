@@ -79,6 +79,12 @@
     transition:all 0.3s ease;
     
 }
+.item span{
+    font-size: larger;
+    font-weight: 600;
+    color:cyan;
+}
+
 .item:hover{
     transform:scale(1.2);
 }
@@ -99,3 +105,4 @@
 .item:hover::after{
     width:100%;
 }
+

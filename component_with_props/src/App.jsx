@@ -1,6 +1,6 @@
 import React from 'react'
 import Props_sample from './components/Props_sample'
-import { useState } from 'react';
+import { useState,useContext } from 'react';
 import LoginPage from './components/LoginPage';
 import ProfileCard from './components/ProfileCard';
 import Counter from "./components/Counter"
@@ -21,9 +21,14 @@ import TaskPage from './components/pages/TaskPage.jsx';
 import { AnimatePresence } from 'framer-motion';
 import UseEffecttask from './components/UseEffecttask.jsx';
 import AxiosFetching from './components/AxiosFetching.jsx';
+import Products from './components/Products.jsx';
+import ProductDescription from './components/pages/ProductDescription.jsx';
+import Cart from './components/Cart.jsx';
 
 const App = () => {
   const [userinfo, setuserinfo] = useState(null);
+
+
 
   //states and functions of todo list 
   const [todo,setTodo]=useState([]);
@@ -77,7 +82,12 @@ const App = () => {
         <Route path="/todo/add" element={<Addtodo addTodo={addTodo}/>} ></Route>
         <Route path="/tasks" element={<TaskPage/>} ></Route>
         <Route path="/effect" element={<UseEffecttask user={students}/>} ></Route>
-        <Route path="/axios" element={<AxiosFetching/>}></Route>        
+        <Route path="/axios" element={<AxiosFetching/>}></Route>
+        <Route path="/products" element={<Products/>}></Route>
+        <Route path="/products/:id" element={<ProductDescription/>}></Route>
+        <Route path="/cart" element={<Cart/>}></Route>
+
+
       </Routes>
     </AnimatePresence>
 
