@@ -1,0 +1,110 @@
+
+/* .hero section styling here  ..............................*/
+.hero{
+    height:19rem;
+    width:auto;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background:#1e293b;
+    color:#3b82f6;
+}
+
+.heroinfo{
+    display:flex;
+    flex-direction: column;
+    gap:0.5rem;
+    padding:0.5rem;
+}
+ .title{
+    font-size: 4rem;
+    font-weight: 600;
+    text-align: center;
+ }
+
+.typingtext{
+    font-size: 3rem;
+    color:cyan;
+    display:flex;
+    flex-direction: column;
+    font-weight: 500;
+    align-items: center;
+ }
+
+.herotext{
+    font-size: 1.5rem;
+    color:#60a5fa;
+ }
+
+/* skills section styling is here ...........................*/
+
+.skillhead{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+    font-size: 2rem;
+    color:#3b82f6;
+    background:#1e293b;
+    padding:0rem 1rem;
+    transition:all 0.3s linear;
+}
+.skillhead:hover{
+    color:cyan;
+}
+.skillwrapper{
+    height:fit-content;
+    display:flex;
+    width:100%;
+    overflow:hidden;
+}
+.skilllist{
+    height:12rem;
+    background:#1e293b;
+    display:flex;
+    width:max-content;
+    align-items: center;
+    gap:2rem;
+    cursor:pointer;
+    animation:scroll 15s linear infinite;
+}
+
+@keyframes scroll{
+    from{
+        transform:translateX(0);
+    }
+
+    to{
+        transform:translateX(-50%);
+    }
+}
+
+.skillitem{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:10rem;
+    width:8rem;
+    background:rgba(255,255,255,0.05);
+    border:0.1rem solid rgba(255,255,255,0.1);
+    border-radius: 1rem;
+    transition:all 0.3s linear;
+}
+
+.skillitem:hover{
+    transform: translateY(-18px);
+}
+.skillitem:active{
+    animation-play-state: paused;
+}
+
+.skillitem img{
+    height:6rem;
+    width:6rem;
+    background-size: cover;
+    transition: all 0.3s linear;
+
+}
+.skillitem img:hover{
+    transform:scale(1.2);
+}
+
+

@@ -1,0 +1,336 @@
+:root{
+--bg-primary:#0f172a;
+--bg-secondary:#1e293b;
+--bg-third:rgb(117, 238, 243);
+--bg-card:#334155;
+
+--accent-primary:#082fbc;
+--accent-secondary:#60a5fa;
+
+--text-primary:#f8fafc;
+--text-secondary:#cbd5e1;
+}
+
+*{
+    min-height:fit-content;
+    padding:0px;
+    margin:0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.main{
+     min-height:fit-content;
+     overflow:auto;
+     display:flex;
+     flex-direction: column;
+     gap:0.5rem;
+     background:var(--bg-third);
+
+}
+
+.aboutsec{
+    height:fit-content;
+    overflow: auto;
+    display: grid;
+    gap:1rem;
+}
+
+.intro{
+    height:25vh;
+    width:100vw;
+    display:flex;
+    justify-content:space-between;
+    padding:1rem;
+    gap:1rem;
+}
+.introsec{
+    display:flex;
+    justify-content: space-between;
+    min-height:20vh;
+    width:auto;
+    padding:1rem;
+}
+.introdesc{
+    overflow: auto;
+    font-size: 2rem;
+    height:31rem;
+    width:35rem;
+    display:grid;
+    align-items: center;
+    justify-content:center;
+    padding:1rem
+
+}
+.highlight{
+    font-size: 3rem;
+    font-weight: 600;
+    color:#082fbc;
+    position:relative;
+    padding:0.2rem;
+    transition:all 0.3s linear;
+    cursor: pointer;
+    
+}
+.highlight::after{
+    content:"";
+    position:absolute;
+    height:0.1rem;
+    width:0rem;
+    background: orange;
+    left:0px;
+    bottom:0px;
+    border-radius: 0.2rem;
+    transition:all 0.5s ease-in;
+    
+}
+
+.highlight:hover::after{
+    width:100%;
+}
+
+.introimg{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:25rem;
+    width:30rem;
+    padding:1rem;
+    margin-right: 2rem;
+    border-radius: 1rem;
+    background:rgb(34, 220, 227);
+}
+
+.introimg img{
+    height:25rem;
+    width:30rem;
+    border-radius: 1rem;
+    transition:all 0.3s linear;
+   
+}
+
+.introimg img:hover{
+    box-shadow: 4px 8px 8px black,
+                4px 8px 8px black;
+}
+
+/* journey section styling .....................................*/
+.journey{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:0.5rem;
+    height:fit-content;
+}
+.line{
+    height:2rem;
+    width:0.1rem;
+    background: #0f172a;
+    margin-left: 0.6rem;
+}
+
+.jhead{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 3rem;
+    font-weight: 600;
+    color:#082fbc;
+}
+
+.timeline{
+    max-width:900px;
+    margin:auto;
+}
+.step{
+    display:flex;
+    gap:0.5rem;
+    align-items:flex-start;
+    position:relative;
+}
+
+.dot{
+    height:1.3rem;
+    width:1.3rem;
+    border-radius:50%;
+    background:#082fbc;
+    margin-top:1rem;
+}
+
+.card{
+    flex:1;
+    background:rgb(117, 238, 243);
+    border:1px solid rgb(117, 238, 243);
+    padding:1rem;
+    border-radius:1rem;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateX(10px);
+    box-shadow: 2px 4px 4px black;
+}
+
+.card h3{
+    font-size: 1.3rem;
+    color:navy;
+}
+
+/* curret state styling  ......................*/
+
+.currentstate{
+    padding:3rem 2rem;
+    background:var(--bg-third);
+}
+
+.cshead{
+    text-align:center;
+    color:#082fbc;
+    font-size:2.5rem;
+    font-weight: 600;
+    margin-bottom:2rem;
+}
+
+.learninggrid{
+   display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:1.5rem;
+}
+
+.learningcard{
+    background:rgb(117, 238, 243);
+    border:1px solid rgb(117, 238, 243);
+    border-radius:1rem;
+    padding:1.5rem;
+    transition:0.3s;
+    box-shadow: 2px 4px 4px black;
+}
+.learningcard:hover{
+    transform:translateY(-14px);
+}
+
+.learningcard h3{
+    font-size: 1.2rem;
+    color:navy;
+}
+
+.learnCard p{
+    font-size: medium;
+    color:var(--text-secondary);
+}
+
+/* education section styling  .................................*/
+
+.education{
+    height:fit-content;
+    padding:1rem 2rem;
+    margin-bottom: 1rem;
+    
+}
+
+.eduhead{
+    text-align: center;
+    font-size: 3rem;
+    color:#082fbc;
+    font-weight: 600;
+}
+
+.educard{
+    height:fit-content;
+    display:flex;
+    justify-content: space-evenly;
+    gap:1rem;
+    padding: 1rem;
+
+}
+.eduInfo{
+    height:fit-content;
+    width:20rem;
+    border:0.2rem solid navy;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column ;
+    gap:0.5rem;
+    padding:0.5rem;
+    background:white;
+    transition:all 0.5s linear;
+    cursor:pointer;
+}
+.eduInfo:hover{
+    background: navy;
+    color:white;
+    transform: translateY(-15px);
+}
+
+.eduInfo h3{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color:crimson;
+    
+}
+
+.edudetails{
+    display: flex;
+    flex-direction: column;
+    gap:0.3rem;
+}
+
+.edudetails span{
+    font-weight: 600;
+}
+
+/* conclusion section ................................... */
+
+.conclusion{
+    display:grid;
+    padding:4rem 2rem;
+    text-align: center;
+    gap:1rem;
+}
+
+.conclusion h3{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #082fbc;
+}
+
+.texts{
+    display:flex;
+    flex-direction: column;
+    width:30rem;
+    gap:2rem;
+    margin:auto;
+}
+
+.conclusionText{
+    font-size: 1.2rem;
+}
+
+.actionbtns{
+    display:flex;
+    gap:2rem;
+    margin:auto;
+}
+
+.actionbtns button{
+    height:2rem;
+    width:8rem;
+    font-size: 1.4rem;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    background: navy;
+    color:white;
+    padding:0.5rem;
+    border-radius: 1rem;
+    cursor:pointer;
+    box-shadow: 2px 4px 4px black;
+    transition: all 0.3s ease-in;
+}
+
+.actionbtns button:hover{
+    background: orange;
+    color:navy;
+}
+
