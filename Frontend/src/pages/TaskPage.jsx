@@ -1,13 +1,15 @@
 import React from 'react'
 import Navbar from "../components/Navbar"
 import PageTransition from '../components/PageTransition'
+import Sidebar from '../components/Sidebar'
 
 const TaskPage = () => {
   return (
     <>
     <PageTransition>
     <Navbar/>
-    <div>TaskPage</div>
+    <Sidebar/>
+
     </PageTransition>
     </>
   )

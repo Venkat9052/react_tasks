@@ -9,7 +9,10 @@
     height:4rem;
     width:100%;
     background: #0f172a;
-    color: white;   
+    color: white;  
+    position:sticky;
+    top:0;
+    z-index: 10000; 
 }
 
 .container{
@@ -106,3 +109,8 @@
     width:100%;
 }
 
+.active {
+  color: yellow;
+  font-weight: bold;
+  border-bottom: 2px solid yellow;
+}

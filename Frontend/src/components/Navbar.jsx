@@ -1,5 +1,5 @@
-import React,{useContext} from 'react'
-import { Link } from 'react-router-dom'
+import React, { useContext } from 'react'
+import { NavLink, Link } from 'react-router-dom'
 import Homepage from '../pages/Homepage'
 import LoginPage from '../components/LoginPage'
 import UserRegistration from './UserRegistration'
@@ -10,34 +10,41 @@ import styles from "../styles/Navbar.module.css";
 
 
 const Navbar = () => {
-    const {cart}=useContext(UserCartContext);
-  return (
-    <>
-    <div className={`${styles.main}`}>
-    <div className={`${styles.container}`}>
-        <div className={`${styles.left}`}>
-            <div className={`${styles.logo}`}>
-                <Link className={`${styles.img}`}><img src={lionlogo} alt="logo.jpg"/></Link>
+    const { cart } = useContext(UserCartContext);
+    return (
+        <>
+            <div className={`${styles.main}`}>
+                <div className={`${styles.container}`}>
+                    <div className={`${styles.left}`}>
+                        <div className={`${styles.logo}`}>
+                            <NavLink className={`${styles.img}`}><img src={lionlogo} alt="logo.jpg" /></NavLink>
+                        </div>
+                    </div>
+                    <div className={`${styles.right}`}>
+                        <ul className={`${styles.list}`}>
+                            <li className={`${styles.item}`}><NavLink to="/" end className={({ isActive }) =>
+                                isActive ? `${styles.home} ${styles.active}` : styles.home}>Home</NavLink></li>
+                            <li className={`${styles.item}`}><NavLink to="/about" className={({ isActive }) =>
+                                isActive ? `${styles.about} ${styles.active}` : styles.about}>About me</NavLink></li>
+                            <li className={`${styles.item}`}><NavLink to="/login" className={({ isActive }) =>
+                                isActive ? `${styles.login} ${styles.active}` : styles.login}>Login</NavLink></li>
+                            <li className={`${styles.item}`}><NavLink to="/register" className={({ isActive }) =>
+                                isActive ? `${styles.signup} ${styles.active}` : styles.signup}>Signup</NavLink></li>
+                            <li className={`${styles.item}`}><NavLink to="/products" className={({ isActive }) =>
+                                isActive ? `${styles.products} ${styles.active}` : styles.products}>Products</NavLink></li>
+                            <li className={`${styles.item}`}><NavLink to="/cart" className={({ isActive }) =>
+                                isActive ? `${styles.cart} ${styles.active}` : styles.cart}>Cart : <span>{cart.length}</span></NavLink></li>
+                            <li className={`${styles.item}`}><NavLink to="/tasks" className={({ isActive }) =>
+                                isActive ? `${styles.tasks} ${styles.active}` : styles.tasks}>Tasks</NavLink></li>
+                        </ul>
+
+                    </div>
+                </div>
             </div>
-        </div>
-        <div className={`${styles.right}`}>
-            <ul className={`${styles.list}`}>
-                <li className={`${styles.item}`}><Link to="/" className={`${styles.home}`}>Home</Link></li>
-                <li className={`${styles.item}`}><Link to="/about" className={`${styles.about}`}>About me</Link></li>
-                <li className={`${styles.item}`}><Link to="/login" className={`${styles.login}`}>Login</Link></li>
-                <li className={`${styles.item}`}><Link to="/register" className={`${styles.signup}`}>Signup</Link></li>
-                <li className={`${styles.item}`}><Link to="/products" className={`${styles.signup}`}>Products</Link></li>
-                <li className={`${styles.item}`}><Link to="/cart" className={`${styles.signup}`}>Cart : <span>{cart.length}</span></Link></li>
-                <li className={`${styles.item}`}><Link to="/tasks" className={`${styles.signup}`}>Tasks</Link></li>
-            </ul>
-            
-        </div>
-    </div>
-    </div>
 
 
-    </>
-  )
+        </>
+    )
 }
 
 export default Navbar

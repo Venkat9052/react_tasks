@@ -50,7 +50,7 @@
     justify-content: center;
     align-items: center;
     gap:1rem;
-    background: #7492e6;
+    background: linear-gradient(#FFBA08,#FFBA08);
 }
 
 .loading h1{
@@ -59,7 +59,7 @@
 .loader{
     height:5rem;
     width:5rem;
-    border:0.5rem solid #7492e6;
+    border:0.5rem solid #FFBA08;
     border-radius: 50%;
     border-top:0.5rem solid white;
     animation:spin 1s ease-in 0s infinite;
@@ -77,38 +77,39 @@
 
 .main{
     min-height:100vh;
-    background:#7492e6;
+    background:#FFBA08;
 }
 
 .container{
     min-height:100vh;
     display:grid;
-    grid-template-columns: repeat(5,1fr);
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
     gap:1rem;
     padding:1rem;
+    background: #FFBA08;
 }
 
 .procard{
-    height:18rem;
+    height:17rem;
     width:14rem;
-    background:var(--bg-card);
-    border:0.1rem solid var(--border-color);
-    box-shadow: var(--shadow-lg);
-    border-radius: 1rem;
-    padding: 0.5rem;
+    background:linear-gradient(#FFBA08,white);
+    border:0.1rem solid #FFBA08;
+    padding:0.3rem;
     color:var(--text-primary);
+    box-shadow:var(--shadow-lg);
+    border-radius:0.3rem;
     transition: all 0.3s linear;
 }
 .procard:hover{
     transform: translateY(-10px);
 }
 .proimage{
-    height:10rem;
+    height:11rem;
     display:flex;
     justify-content: center;
     align-items: center;
-    border-radius: 0.5rem;
-    background: #7492e6;
+    border-radius: 0.5rem 0.5rem 0rem 0rem;
+    background: linear-gradient(grey,grey,white);
 }
 
 .proimage a{
@@ -123,28 +124,37 @@
     width:100%;
     height:100%;
 }
+.prodetails{
+    font-size:small;
+}
 
+.price{
+    text-align: center;
+    font-size: medium;
+    font-weight: 600;
+    color:teal;
+}
 .addtocartbtn{
     height:1.5rem;
-    width:50%;
+    width:fit-content;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 3rem;
-    background:#b1c1ee;
-    border-radius: 0.3rem;
-    border:0.1rem solid #7492e6;
-    color:var(--text-primary);
+    background:#004643;
+    border-radius: 0.8rem;
+    border:0.1rem solid #004643;
+    color:white;
+    margin-left:9.5rem;
+    padding:0rem 0.5rem;
     transition:0.3s;
 }
 
 .addtocartbtn button{
     cursor:pointer;
+
 }
 .addtocartbtn:hover{
-   background: #2563eb;
-   color:white;
-   border:0.1rem solid navy;
+   background:rgb(41, 219, 219);
+   color:black;
+   border:0.1rem solid rgb(3, 184, 184);
 
 }
 
@@ -153,4 +163,8 @@
     border:0.1rem solid green;
     border-radius: 0.3rem;
     color:black;
+}
+
+.addtocartbtn button span{
+    font-weight: 800;
 }

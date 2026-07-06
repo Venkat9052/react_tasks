@@ -61,9 +61,10 @@ const Products = () => {
                 <div className={`${styles.prodetails}`}>
                   <p>{product.title}</p>
                   <p>{product.brand}</p>
+                  <p className={`${styles.price}`}>{product.price} $</p>
                 </div>
                 <div className={`${styles.addtocartbtn}`}>
-                  <button onClick={()=>Addtocart(product)}>Add to Cart</button>
+                  <button onClick={()=>Addtocart(product)}><span>+</span> Cart</button>
                 </div>
               </div>)
             })

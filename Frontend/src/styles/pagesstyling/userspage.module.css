@@ -1,0 +1,112 @@
+*{
+    padding:0px;
+    margin:0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+.main{
+    padding:0.5rem;
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    gap:0.5rem;
+    position:relative;
+    overflow: hidden;
+}
+.imagebox{
+    height:5rem;
+    width:fit-content;
+    background:white;
+    margin:auto;
+    border-radius: 1rem 1rem 0rem 0rem;
+}
+.imagecontainer{
+    height:5rem;
+    width:30rem;
+    background: rgb(243, 206, 138);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem 1rem 0rem 0rem;
+    margin:auto;
+    position:relative;
+}
+
+.imagecontainer img{
+    height:8rem;
+    width:8rem;
+    border-radius: 50%;
+    position: absolute;
+    top:0.5rem;
+
+}
+.goback{
+    height:2rem;
+    width:2rem;
+    background:#f1f5f9;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left:17rem;
+    top:1rem;
+    cursor:pointer;
+    border:none;
+    outline:none;
+    z-index:1000;
+    border:0.1rem solid grey;
+    
+}
+
+.goback img{
+    height:100%;
+    width:100%;
+}
+.card{
+    width: 30rem;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #ffffff;
+    border-radius: 0rem 0rem 1rem 1rem;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    border: 1px solid #e5e7eb;
+}
+
+.title{
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #f1f5f9;
+}
+
+.infoRow{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid #f1f5f9;
+    gap: 1rem;
+}
+
+.infoRow:last-child{
+    border-bottom: none;
+}
+
+.label{
+    font-weight: 600;
+    color: #64748b;
+    min-width: 180px;
+}
+
+.value{
+    text-align: right;
+    color: #1e293b;
+    font-weight: 500;
+    word-break: break-word;
+
+}

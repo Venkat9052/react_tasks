@@ -27,6 +27,12 @@ import AxiosFetching from '../components/AxiosFetching.jsx';
 import Products from '../components/Products.jsx';
 import ProductDescription from '../pages/ProductDescription.jsx';
 import Cart from '../components/Cart.jsx';
+import Users from '../pages/users/Users.jsx';
+import Dashboard from "../pages/Dashboard.jsx";
+import Profile from "../pages/Profile.jsx";
+import Settings from "../pages/Settings.jsx";
+import Userdetails from "../pages/Userdetails.jsx";
+import Dashboardlayout from '../layouts/Dashboardlayout.jsx';
 
 const AppRoutes = () => {
 
@@ -46,10 +52,6 @@ const AppRoutes = () => {
     const greetings = (students) => {
         setuserinfo(students);
     }
-
-
-
-
 
     return (
         <>
@@ -71,12 +73,12 @@ const AppRoutes = () => {
               </div>)})):(null)}
     </div> */}
 
-            <AnimatePresence mode="wait">
+            
                 <Routes>
                     <Route path="/" element={<Homepage />}></Route>
                     <Route path="/about" element={<About />}></Route>
                     <Route path="/login" element={<LoginPage />}></Route>
-                    <Route path="/profile" element={<ProfileCard user={students} />}></Route>
+                    <Route path="/profiles" element={<ProfileCard user={students} />}></Route>
                     <Route path="/props" element={<Props_sample user={students} greet={greetings} />}></Route>
                     <Route path="/counter" element={<Counter />}></Route>
                     <Route path="/events" element={<EventHandling />}></Route>
@@ -93,13 +95,15 @@ const AppRoutes = () => {
                     <Route path="/products" element={<Products />}></Route>
                     <Route path="/products/:id" element={<ProductDescription />}></Route>
                     <Route path="/cart" element={<Cart />}></Route>
-
-
+                    <Route path="/dashboard" element={<Dashboardlayout/>}>
+                        <Route  index element={<Dashboard/>}></Route>
+                        <Route path="profile" element={<Profile/>}></Route>
+                        <Route path="settings" element={<Settings/>}></Route>
+                        <Route path="users" element={<Users/>}></Route>
+                        <Route path="users/:id" element={<Userdetails/>}></Route>
+                    </Route>
+                    
                 </Routes>
-            </AnimatePresence>
-
-
-
         </>
     )
 }
