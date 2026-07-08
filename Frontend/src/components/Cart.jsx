@@ -23,7 +23,7 @@ const Cart = () => {
             {cart.map((item)=>{
                 return (
                 <>
-                <div className={`${styles.container} key=${item.id}`}>
+                <div className={`${styles.container}`} key={item.id}>
                     <div className={`${styles.proimage}`}>
                         <img src={item.thumbnail} alt={item.title}/>
                     </div>

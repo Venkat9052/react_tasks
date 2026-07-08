@@ -8,8 +8,6 @@ const TaskPage = () => {
     <>
     <PageTransition>
     <Navbar/>
-    <Sidebar/>
-
     </PageTransition>
     </>
   )
