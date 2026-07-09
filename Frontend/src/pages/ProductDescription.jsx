@@ -74,7 +74,7 @@ const ProductDescription = () => {
                   <div className={`${styles.prodetails}`}>
                     <p>Brand: <span>{products.brand}</span></p>
                     <p>Category: <span>{products.category}</span></p>
-                    <p>Rating : <span>{products.rating}</span></p>
+                    <p>Rating : <span>{products.rating}</span> / <span>5</span></p>
                   </div>
                   <div className={`${styles.qty}`}>
                     <h1>Quantity :</h1>
